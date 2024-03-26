@@ -4,20 +4,20 @@ metadata:
   name: postgres-deploy
   labels:
     name: postgres-deploy
-    app: demo-voting-app
+    app: election-voting-app
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: postgres-pod
-      app: demo-voting-app
+      app: election-voting-app
     
   template:
     metadata:
       name: postgres-pod
       labels:
         name: postgres-pod
-        app: demo-voting-app
+        app: election-voting-app
     spec:
       containers:
         - name: postgres
